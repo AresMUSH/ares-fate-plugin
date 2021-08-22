@@ -1,6 +1,6 @@
-<li role="separator" class="divider"></li>
+<li><hr role="separator" class="dropdown-divider"></li>
 
-<li><a href="#" {{action (mut this.showSkillRoll) true}}>Roll Ability</a></li>
+<li><a href="#" {{action (mut this.showSkillRoll) true}} class="dropdown-item">Roll Ability</a></li>
 
 
 <BsModalSimple @title="Roll Ability" @closeTitle="Cancel" @submitTitle="Roll" @size={{null}} @fade={{true}} @open={{this.showSkillRoll}} @onSubmit={{action "rollAbility"}} @onHide={{action (mut this.showSkillRoll) false}}>
