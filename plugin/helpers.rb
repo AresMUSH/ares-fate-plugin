@@ -38,12 +38,14 @@ module AresMUSH
       
       ability = match[:ability].strip
       modifier = match[:modifier].nil? ? 0 : match[:modifier].gsub(/\s+/, "").to_i
-      if Fate.rating_ladder[ability]
+      if (ability.to_i != 0)
+        rating = ability.to_i
+      elsif Fate.rating_ladder[ability]
         rating = Fate.rating_ladder[ability]
       elsif char
         rating = Fate.skill_rating(char, ability)
       else 
-        rating = 0
+        return 0
       end
       dice = Fate.roll_fate_dice
       
