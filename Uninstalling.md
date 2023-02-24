@@ -37,8 +37,8 @@ Ares plugins plug IN easily, but taking them out requires a bit of code fiddling
 6. Switch back to the web portal tinker page and click "Reset".
 
 7. Manually remove all plugin's files from your server (and GitHub fork, if applicable), including:
-    * aresmush/plugins/cookies
-    * aresmush/game/config/cookies.yml
+    * aresmush/plugins/fate
+    * aresmush/game/config/fate.yml
     * Web portal files - See the /webportal folder in this repo for a specific list of files.
 
 8. Run the `load all` command.
