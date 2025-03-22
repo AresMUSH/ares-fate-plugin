@@ -180,14 +180,21 @@ module AresMUSH
       }
     end
     
-    def self.uninstall_plugin
-      Character.all.each do |c|
-        c.update(fate_aspects: nil)
-        c.update(fate_stunts: nil)
-        c.update(fate_skills: nil)
-        c.update(fate_points: nil)
-        c.update(fate_refresh: nil)        
-      end
+    def self.uninstall_plugin(client)
+      begin 
+        Character.all.each do |c|
+          c.update(fate_aspects: nil)
+          c.update(fate_stunts: nil)
+          c.update(fate_skills: nil)
+          c.update(fate_points: nil)
+          c.update(fate_refresh: nil)        
+        end
+         Manage.uninstall_plugin("fate")
+         client.emit_success "Plugin uninstalled."
+      
+       rescue Exception => e
+         client.emit_failure "Error uninstalling plugin: #{e} backtrace=#{e.backtrace[0,10]}"
+       end
     end
   end
 end

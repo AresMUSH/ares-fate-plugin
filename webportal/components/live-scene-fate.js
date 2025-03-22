@@ -1,5 +1,6 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
+import { action } from '@ember/object';
 
 export default Component.extend({
   showSkillRoll: false,
@@ -45,5 +46,10 @@ export default Component.extend({
         }
       });
     }
+  },
+  
+  @action
+  setShowSkillRoll(value) {
+    this.set('showSkillRoll', value);
   }
 });

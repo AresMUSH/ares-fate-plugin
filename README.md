@@ -4,7 +4,7 @@
 
 **Supported**  Although not part of the main Ares code release, this is a supported plugin.  [Report](https://aresmush.com/feedback) any problems you encounter.
 
-Designed for AresMUSH 1.0.
+See release notes to determine which versions of AresMUSH are compatible.
 
 > Note: This code has been run through its paces on a test server, but hasn't been playtested on a real game yet.   The first game to implement this will receive extra technical support from Faraday to iron out any bugs.
 
