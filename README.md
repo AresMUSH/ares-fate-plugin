@@ -37,7 +37,7 @@ This plugin is a simplified implementation of the Fate RPG system.
 
 ## Web Portal
 
-Only a simple sheet display on profiles, no chargen or scene roll.
+This plugin includes a simple sheet display on profiles and a way to roll skills in a scene. There is no chargen support.
 
 ## Refresh
 
