@@ -2,12 +2,12 @@ module AresMUSH
   module Fate
     class FateRollRequestHandler
       def handle(request)
-        scene = Scene[request.args[:scene_id]]
+        scene = Scene[request.args['scene_id']]
         enactor = request.enactor
-        sender_name = request.args[:sender]
-        skill = InputFormatter.titlecase_arg(request.args[:skill])
-        vsChar = InputFormatter.titlecase_arg(request.args[:vsChar])
-        vsSkill = InputFormatter.titlecase_arg(request.args[:vsSkill])
+        sender_name = request.args['sender']
+        skill = InputFormatter.titlecase_arg(request.args['skill'])
+        vsChar = InputFormatter.titlecase_arg(request.args['vsChar'])
+        vsSkill = InputFormatter.titlecase_arg(request.args['vsSkill'])
         
         error = Website.check_login(request)
         return error if error
